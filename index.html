@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactiv card</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <section class="sectionone">
+        <div class="card-back card-design">
+            <div class="circle">
+                <div class="circleone"></div>
+            <div class="circletwo"></div>
+            </div>
+            <p class="cardn">0000 0000 0000 0000</p>
+            <div class="card-footer"><p>Jane Applased</p>
+                <span>00/00</span></div>
+        </div>
+        <div class="card-front card-design">
+             <p>000</p>
+        </div>
+      </section>
+      <section class="sectiontwo">
+        <form action="">
+          <label for="cname">Cardholder Name</label>
+          <input
+            type="text"
+            name="cname"
+            id="cname"
+            required
+            placeholder="e.g. Jane Appleseed"
+          />
+
+          <label for="cnumber">Card Number</label>
+          <input
+            type="number"
+            name="cnumber"
+            id="cnumber"
+            placeholder="e.g. 1234 5678 9123 0000"
+            required
+          />
+          <div class="content">
+            <div class="">
+              <label for="mm">Exp. Date (MM/YY)</label>
+              <div class="expdate">
+                <input type="number" id="mm" placeholder="MM" class="mmyy" required/>
+                <input type="number" id="yy" placeholder="YY" class="mmyy"required/>
+              </div>
+            </div>
+            <div class="cvc-content">
+              <label for="cvc">Cvc</label>
+              <input type="number" id="cvc" placeholder="e.g. 123" class="cvc" required/>
+            </div>
+          </div>
+          <button class="btn">Confirm</button>
+        </form>
+      </section>
+    </div>
+  </body>
+</html>
