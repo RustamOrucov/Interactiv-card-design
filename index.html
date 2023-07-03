@@ -18,16 +18,16 @@
                 <div class="circleone"></div>
             <div class="circletwo"></div>
             </div>
-            <p class="cardn">0000 0000 0000 0000</p>
-            <div class="card-footer"><p>Jane Applased</p>
-                <span>00/00</span></div>
+            <p class="cardn" id="mirrorSpanNum">0000 0000 0000 0000</p>
+            <div class="card-footer" id="mirrorSpanName"><p>Jane Applased</p>
+                <div><span id="mirrorSpanmm">00</span>/<span id="mirrorSpanyy">00</span></div></div>
         </div>
         <div class="card-front card-design">
-             <p>000</p>
+             <p id="mirrorSpancvc">000</p>
         </div>
       </section>
       <section class="sectiontwo">
-        <form action="">
+        <form action="" id="form">
           <label for="cname">Cardholder Name</label>
           <input
             type="text"
@@ -35,32 +35,45 @@
             id="cname"
             required
             placeholder="e.g. Jane Appleseed"
-          />
-
-          <label for="cnumber">Card Number</label>
-          <input
+            oninput="mirrorText()"
+            maxlength="20"
+            />
+            
+            <label for="cnumber">Card Number</label>
+            <input
+            oninput="mirrorNum()"
             type="number"
             name="cnumber"
-            id="cnumber"
+            id="number"
             placeholder="e.g. 1234 5678 9123 0000"
             required
+            maxlength="20"
+            minlength="16"
           />
+          <p id="numerror" class="errornum" style="display: none"></p>
           <div class="content">
             <div class="">
-              <label for="mm">Exp. Date (MM/YY)</label>
+              <label for="mm" >Exp. Date (MM/YY)</label>
               <div class="expdate">
-                <input type="number" id="mm" placeholder="MM" class="mmyy" required/>
-                <input type="number" id="yy" placeholder="YY" class="mmyy"required/>
+                <input type="number" id="mm" placeholder="MM" class="mmyy" required oninput="mirrormm()" max="100"/>
+                <input type="number" id="yy" placeholder="YY" class="mmyy"required oninput="mirroryy()" max="100"/>
               </div>
             </div>
             <div class="cvc-content">
               <label for="cvc">Cvc</label>
-              <input type="number" id="cvc" placeholder="e.g. 123" class="cvc" required/>
+              <input type="number" id="cvc" placeholder="e.g. 123" class="cvc" required oninput="mirrorcvc()" max="1000"/>
             </div>
           </div>
-          <button class="btn">Confirm</button>
+          <button class="btn" onclick="hide()">Confirm</button>
         </form>
+        <div id="successpop" class="complate">
+          <img class="finishIcon" src="./images/icon-complete.svg" alt="">
+          <h1>Thank You!</h1>
+          <p class="plast">We've added your card details</p>
+          <button id="btn" class="btn" onclick="revFun()">Continue</button>
+        </div>
       </section>
     </div>
+    <script src="./script.js"></script>
   </body>
 </html>

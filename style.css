@@ -144,6 +144,10 @@ form {
     margin-left: 280px;
     margin-top: 90px;
 }
+.complate{
+  border: 2pxsolid black;
+  visibility: hidden;
+}
 /* =====Media screen only=== */
 @media only screen and (max-width:700px){
     .container{
